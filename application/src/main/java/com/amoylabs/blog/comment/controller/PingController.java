@@ -1,4 +1,4 @@
-package com.amoylabs.blog.post.controller;
+package com.amoylabs.blog.comment.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
