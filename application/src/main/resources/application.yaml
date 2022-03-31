@@ -1,0 +1,21 @@
+server:
+  port: 28080
+
+spring:
+  application:
+    name: "spring-boot-admin"
+  boot:
+    admin:
+      client:
+        url: https://spring-boot-admin.amoylabs.com:30443
+        instance:
+          service-host-type: IP
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
