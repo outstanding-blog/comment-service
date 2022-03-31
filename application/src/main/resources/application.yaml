@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: "spring-boot-admin"
+    name: "comment-service"
   boot:
     admin:
       client:
