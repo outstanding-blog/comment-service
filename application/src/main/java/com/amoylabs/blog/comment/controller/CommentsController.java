@@ -20,6 +20,11 @@ public class CommentsController {
         return ResponseEntity.ok().body(commentsService.loadComments(postId));
     }
 
+    @GetMapping(value = "/v1/posts/{postId}/comments/{commentId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity loadOne(@PathVariable UUID postId, @PathVariable UUID commentId) {
+        return ResponseEntity.ok().body(commentsService.loadComment(postId, commentId));
+    }
+
     @Autowired
     public void setCommentsService(CommentsService commentsService) {
         this.commentsService = commentsService;
