@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.amoylabs.blog</groupId>
 		<artifactId>pom-root</artifactId>
-		<version>0.0.2</version>
+		<version>0.0.6</version>
 	</parent>
 
 	<artifactId>comment-service</artifactId>
@@ -40,23 +40,12 @@
 		<finalName>app</finalName>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>build-info</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
