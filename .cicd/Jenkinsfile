@@ -78,8 +78,8 @@ pipeline {
                             --verbosity debug \
                             --insecure \
                             --skip-tls-verify \
-                            --destination docker.amoylabs.com:30500/blog/comment-service:$BUILD_NUMBER \
-                            --destination docker.amoylabs.com:30500/blog/comment-service:latest
+                            --destination cr.amoylabs.com:30500/blog/comment-service:$BUILD_NUMBER \
+                            --destination cr.amoylabs.com:30500/blog/comment-service:latest
                         '''
                     }
                 }
@@ -104,7 +104,7 @@ pipeline {
                             
                             echo "Current Version"
                             cat kustomize/deploy.yaml
-                            sed -i 's+docker.amoylabs.com:30500/blog/comment-service:.*+docker.amoylabs.com:30500/blog/comment-service:${BUILD_NUMBER}+g' kustomize/deploy.yaml
+                            sed -i 's+cr.amoylabs.com:30500/blog/comment-service:.*+cr.amoylabs.com:30500/blog/comment-service:${BUILD_NUMBER}+g' kustomize/deploy.yaml
                             echo "New Version"
                             cat kustomize/deploy.yaml
                             
